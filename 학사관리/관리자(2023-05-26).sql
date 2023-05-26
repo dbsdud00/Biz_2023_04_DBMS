@@ -64,8 +64,14 @@ GRANT DBA TO student;
 CREATE TABLESPACE memo -- 저장소의 이름을 student 라는 이름으로 사용하겠다
 DATAFILE 'C:/app/data/memo.dbf' -- 저장소 폴더에 STUDENT.DBF 라는 이름으로 생성
 SIZE 1M AUTOEXTEND ON NEXT 1K;           
-                                
+
+-- DROP USER memo_user CASCADE;                
+
 CREATE USER memo_user IDENTIFIED BY 12341234
-DEFAULT TABLESPACE student;
+DEFAULT TABLESPACE memo;
          
-                                
+GRANT DBA TO memo_user;           
+
+
+
+
