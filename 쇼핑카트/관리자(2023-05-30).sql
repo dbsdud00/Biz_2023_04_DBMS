@@ -1,0 +1,10 @@
+CREATE TABLESPACE shopping_cart
+DATAFILE 'C:/app/data/shopping_cart.dbf'
+SIZE 1M AUTOEXTEND ON NEXT 1K;
+
+ALTER SESSION SET "_ORACLE_SCRIPT" = true;
+
+CREATE USER shopuser IDENTIFIED BY 12341234
+DEFAULT TABLESPACE shopping_cart;
+
+GRANT DBA TO shopuser;
