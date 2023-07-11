@@ -14,4 +14,8 @@ FLUSH PRIVILEGES;
 -- MySQL 의 SCHEME 생성
 CREATE DATABASE scoreDB;
 
+GRANT ALL PRIVILEGES ON scoreDB.* TO todo@localhost;
+FLUSH PRIVILEGES;
 
+
+GRANT ALL PRIVILEGES ON footprintdb.* TO toes@localhost;
